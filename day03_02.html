@@ -41,6 +41,9 @@
             a:hover{
                 color: blue;
             }
+            /*
+                hover和active可也以为其他元素设置
+            */
             p:hover{
                 background-color: bisque;
             }
@@ -50,7 +53,12 @@
             a:active{
                 color: black;
             }
-            
+            input:focus{
+                background-color: yellow;
+            }
+            p::selection{
+                background-color: orange;
+            }
         </style>
     </head>
     <body>
@@ -60,5 +68,6 @@
         <br /><br />
         <a href="http://www.qq.mail.com">1111</a>
         <p>11111111111</p>
+        <input type="text" />
     </body>
 </html>
