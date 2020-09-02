@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>常用选择器</title>
+        <style type="text/css">
+            /*
+            id选择器
+                -通过元素的id属性值选中唯一的一个元素
+                -语法：
+                    #id属性值{}
+            */
+            #p1{
+                font-size: 32px;
+            }
+            /*
+            类选择器
+                -通过元素的class属性值选中一组元素
+                -语法：
+                    .class属性值{}
+            */
+            .p2{
+                color: red;
+            }
+            .hello{
+                color: blue;
+            }
+            /*
+            选择器分组（并集选择器）
+                -通过选择器分组可以同时选中多个选择器对应的元素
+                -语法：选择器1，选择器2，选择器N{}
+            为id为p1的元素、class为p2的元素,以及h1，同时设置背景颜色为橘色
+            */
+            #p1,.p2,h1{
+                background-color: coral;
+            }
+            /*
+            通配选择器
+                -他可以用来选中页面中的所有的元素
+                语法：*{}
+            */
+            
+            /*
+            符合选择器（交集选择器）
+                -作用：
+                    -可以选中同时满足多个选择器的元素
+                -语法：
+                    -选择器1选择器2选择器N{}
+            为拥有class=p3的span元素设置背景颜色为黄色
+            */
+            span.p3{
+                background-color: yellow;   
+            }  
+        </style>
+    </head>
+    <body>
+        <h1>00000000</h1>
+        <p id="p1">111111111</p>
+        <p>111111111</p>
+        <p class="p2">111111111</p>
+        <p class="p2 hello">111111111</p>
+        <p class="p2">111111111</p>
+        <p>111111111</p>
+        <p>111111111</p>
+        <p>111111111</p>
+        <p class="p3">111111111</p>
+        <span class="p3">222222222</span>
+    </body>
+</html>
