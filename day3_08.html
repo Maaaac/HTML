@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>样式继承</title>
+        <style type="text/css">
+            body{
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            祖先元素上的样式，也会被其后代元素所继承
+            利用继承，可以将一些基本的样式设置给祖先元素，使得所有后代元素自动继承这些样式
+
+            并不是所有的样式都会被子元素继承，如：背景相关的样式
+        -->
+        <p style="background-color: yellow;">
+            1111111111
+            <br /><br />
+            <span>2222222222</span>
+        </p>
+
+        <span>3333333333</span>
+    </body>
+</html>
