@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>兄弟元素选择器</title>
+        <style type="text/css">
+        /*
+            为span后的一个p元素设置背景颜色为黄色
+                后一个兄弟元素选择器
+                -作用：可以选中一个元素后紧挨着的指定的兄弟元素
+                -语法：前一个 + 后一个{}
+        */
+            span + p{
+                background-color: yellow;
+            }
+
+        /*
+            选中后面的所有兄弟元素
+                -语法：前一个 ~ 后面所有{}
+        */
+            div ~ p{
+                background-color: aqua;
+            }
+        </style>
+
+    </head>
+    <body>
+        <span>11111111111</span>
+        <p>2222222222</p>
+        <p>2222222222</p>
+        <p>2222222222</p>
+        <span>11111111111</span>
+        <div>3333333333</div>
+        <p>2222222222</p>
+        <p>2222222222</p>
+        <p>2222222222</p>
+
+    </body>
+</html>
