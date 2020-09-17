@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>伪类的顺序</title>
+        <style>
+            /*
+                涉及到a的伪类一共有四个：
+                    ：link
+                    ：visited
+                    ：hover
+                    ：active
+                    而这四个选择器的优先级是一样的
+                    所以hover不能卸载active后面
+                    编写的顺序要按照上述方式排列
+            */
+            a:link{
+                color: yellowgreen;
+            }
+
+            a:visited{
+                color: red;
+            }
+
+            a:hover{
+                color: orange;
+            }
+
+            a:active{
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <a href="http://www/baidu.com">访问过的链接</a>
+        <a href="http://www/baidu.com">未访问过的链接</a>
+    </body>
+</html>
