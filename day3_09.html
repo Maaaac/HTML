@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>选择器的优先级</title>
+        <style>
+            /*
+                当使用不同的选择器，选中同一个元素，并且设置相同类型的样式时
+                    此时样式之间产生了冲突，最终采用的样式遵循选择器的优先级（权重）决定
+                    优先级高的优先显示
+                
+                优先级的规则：
+                    内联样式-优先级1000
+                    id选择器-优先级100
+                    类和伪类-优先级10
+                    元素选择器-优先级1
+                    通配*-优先级0
+                    继承的样式-没有优先级
+
+                当选择器中包含多种选择器时，需要将多种选择器的优先级相加然后再比较，
+                    但是需要注意，选择器优先级计算不会超过他最大的数量级
+                    如果使用的选择器的优先级一样，则使用靠后的样式
+
+                    并集选择器的优先级是单独计算
+                    div、p、#p1、.hello{}
+
+                可以在样式的最后添加    !important ，则此时改样式将会获得一个最高的优先级
+                    将会优先于所有的样式显示甚至超过内联样式
+                    但是在开发中最好尽量避免使用!important
+            */
+            *{
+                font-size: 50px;
+            }
+
+            p{
+                font-size: 30px;
+                background-color:green;
+            }
+
+            .p1{
+                background-color: yellow;
+                color: yellow !important;
+            }
+
+            .p3{
+                color: green;
+            }
+
+            #p2{
+                background-color: yellowgreen;
+            }
+
+            p#p2{
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <p class="p1 p3" id="p2" style="background-color: orange;">11111111111
+            <span>222222222222</span>
+        </p>
+    </body>
+</html>
