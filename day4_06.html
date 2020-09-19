@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>字体样式二</title>
+        <style type="text/css">
+        /*
+            font-stlye可以用来设置文字的斜体
+                -可选值：
+                    normal：默认值，文字正常显示
+                    italic：斜体显示
+                    oblique:文字会以倾斜的效果显示（效果类似italic）
+                        -大部分浏览器都不会对倾斜和斜体做区分，
+                            也就是说设置italic和oblique它们的效果往往是一样的
+                            一般只会使用ltalic
+            font-weight可以用来设置文本的加粗效果
+                可选值：
+                    normal：默认值，文字正常显示
+                    bold：文字加粗显示
+                font-weight也可以指定100-900之间的9个整百数，来改变文字的粗细
+                    但是由于用户的计算机往往没有这么多级别的字体，所以很难达到想要的效果
+            font-variant可以用来设置小型大小字母
+                可选值：
+                normal：默认值，文字正常显示
+                small-caps：文字以小型大写字母显示（小写字母会变成小一号的大写字母）
+        */
+            .p1{
+                color: red;
+                font-size: 30px;
+                font-family: "微软雅黑";
+                font-style: italic;
+                font-weight: bold;
+                font-variant:small-caps;
+            }
+        /*
+            在css中还提供了一个样式叫font，
+                使用该样式可以同时设置字体相关的所有样式
+                可以将字体的样式的值，统一写在font样式中，不同的值之间使用空格隔开
+            使用font设置字体样式时，斜体 加粗 大型小写字母，没有顺序要求
+                其中文字大小和字体必须写，并且两者一定要在font格式的最后两位
+
+            实际上使用简写属性也会有一个比较好的性能
+        */
+            .p2{
+                font:italic small-caps bold 60px "微软雅黑";
+            }
+        </style>
+    </head>
+    <body>
+        <p class="p1">111111</p>
+        <p class="p2">222222</p>
+    </body>
+</html>
